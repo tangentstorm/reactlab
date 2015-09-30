@@ -8,12 +8,13 @@ html
     script(type="text/javascript" src="/js/syntax-nodes.js")
     script(type="text/javascript")
       :coffee-script
+        window.ast =
+          name: { iden: "Hello" }
+          decls: []
+          suite: []
         window.onload = ->
-          React.render(React.createElement(ProgramNode,
-               name: "Hello",
-               decls: []
-               suite: []
-            ), document.getElementById('mount'))
+          React.render(React.createElement(Program, ast),
+                       document.getElementById('mount'))
   body
     :markdown
       [React.js](https://facebook.github.io/react/)
