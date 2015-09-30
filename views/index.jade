@@ -2,14 +2,18 @@ doctype html
 html
   head
     title #{title}
+    link(rel="stylesheet", type="text/css", href="/css/syntax.css").
     script(type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.min.js")
-    script(type="text/javascript" src="/js/hello-react.js")
+      src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js")
+    script(type="text/javascript" src="/js/syntax-nodes.js")
     script(type="text/javascript")
       :coffee-script
         window.onload = ->
-          React.render(React.createElement(HelloReact, name: "World"),
-                       document.getElementById('mount'))
+          React.render(React.createElement(ProgramNode,
+               name: "Hello",
+               decls: []
+               suite: []
+            ), document.getElementById('mount'))
   body
     :markdown
       [React.js](https://facebook.github.io/react/)

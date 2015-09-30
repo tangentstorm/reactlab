@@ -1,0 +1,23 @@
+code {
+    font-family: "envy code r", consolas, mono;
+    font-size: 10pt;
+}
+
+button {
+    margin: 0; margin-top: 2px;
+    border: dashed #99c 1px;
+    background: #fff;
+    color: #99c;
+    border-radius: 2px;
+}
+
+suite {
+    display:block;
+    padding-left: 1em;
+}
+
+
+kw {
+    font-weight: bold;
+    color: #33f
+}
