@@ -1,0 +1,37 @@
+* reactlab
+
+This started as a place to do random reactjs stuff, but it's turning into a web-based version of [[http://www.templetons.com/brad/alice.html][alice pascal]], an old syntax-directed editor for pascal.
+
+* installation
+
+First, clone this repo locally and install [[http://vagrantup.com/][vagrant]].
+
+Then:
+
+: cd reactlabs
+: vagrant up
+
+Once vagrant is done provisioning the server:
+
+: vagrant ssh
+
+Then from the vagrant shell:
+
+: cd /vagrant
+: nodemon serve.js
+
+Note that you're running the generated =*.js= file, /not/ the source =*.cjsx= file.
+
+You can now load the app in your web browser:
+
+  [[http://localhost:8086]]
+
+When you're done:
+
+: vagrant halt
+
+to shut down the virtual machine, or
+
+: vagrant destroy
+
+to completely remove it.
