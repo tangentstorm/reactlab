@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title #{title}
+    script(type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.min.js")
+    script(type="text/javascript" src="/js/hello-react.js")
+    script(type="text/javascript")
+      :coffee-script
+        window.onload = ->
+          React.render(React.createElement(HelloReact, name: "World"),
+                       document.getElementById('mount'))
+  body
+    :markdown
+      [React.js](https://facebook.github.io/react/)
+      demo by [michal j wallace](http://tangentstorm.com/)
+    #mount.
+      (react stuff will appear here)
