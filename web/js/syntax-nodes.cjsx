@@ -13,10 +13,20 @@ InsertionPoint = React.createClass
       <button>{@props.kind}</button>
     </span>
 
-ProgramNode = React.createClass
+
+Iden = React.createClass
+  render: ->
+    self = this
+    <input type="text" width="16" value={@props.node.iden}
+      onChange={ (e) ->
+        self.props.node.iden = e.target.value
+        self.forceUpdate() } />
+
+
+Program = React.createClass
   render: ->
     <code className="program">
-      <kw>program</kw> <span className="iden">{@props.name}</span>;
+      <kw>program</kw> <Iden node={@props.name}/>;
         <div>
          <InsertionPoint nodes={@props.decls}  kind="decl"/>
         </div>

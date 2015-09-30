@@ -5,7 +5,7 @@ code {
 
 button {
     margin: 0; margin-top: 2px;
-    border: dashed #99c 1px;
+    border: solid #99c 1px;
     background: #fff;
     color: #99c;
     border-radius: 2px;
@@ -16,8 +16,13 @@ suite {
     padding-left: 1em;
 }
 
-
 kw {
     font-weight: bold;
     color: #33f
+}
+
+input {
+    width: 8em;
+    border: dotted #ccf 1px;
+    border-radius: 3px;
 }
